@@ -18,8 +18,7 @@ Caching: Provides both first-level (session-based) and second-level (application
 ### Integrating Hibernate with Spring Boot
 Add Dependencies (Maven) Add the following dependencies to your pom.xml file:
 
-xml
-Copy code
+```shell
 <dependency>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-data-jpa</artifactId>
@@ -29,6 +28,7 @@ Copy code
     <artifactId>h2</artifactId>
     <scope>runtime</scope>
 </dependency>
+```
 ### Configure application.properties In your src/main/resources/application.properties file, configure the database:
 
 properties
