@@ -13,3 +13,29 @@ Hibernate is an ORM (Object Relational Mapping) tool that maps Java objects to d
 Automatic Mapping: Maps Java classes to tables and Java fields to columns.
 Session Management: Manages connections and transactions to the database.
 Caching: Provides both first-level (session-based) and second-level (application-level) caching.
+
+
+### Integrating Hibernate with Spring Boot
+Add Dependencies (Maven) Add the following dependencies to your pom.xml file:
+
+xml
+Copy code
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-data-jpa</artifactId>
+</dependency>
+<dependency>
+    <groupId>com.h2database</groupId>
+    <artifactId>h2</artifactId>
+    <scope>runtime</scope>
+</dependency>
+### Configure application.properties In your src/main/resources/application.properties file, configure the database:
+
+properties
+Copy code
+spring.datasource.url=jdbc:h2:mem:testdb
+spring.datasource.driver-class-name=org.h2.Driver
+spring.datasource.username=sa
+spring.datasource.password=password
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
