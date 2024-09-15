@@ -19,6 +19,7 @@ Caching: Provides both first-level (session-based) and second-level (application
 Add Dependencies (Maven) Add the following dependencies to your pom.xml file:
 
 ```shell
+
 <dependency>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-data-jpa</artifactId>
@@ -28,14 +29,22 @@ Add Dependencies (Maven) Add the following dependencies to your pom.xml file:
     <artifactId>h2</artifactId>
     <scope>runtime</scope>
 </dependency>
+
 ```
 ### Configure application.properties In your src/main/resources/application.properties file, configure the database:
 
 properties
 Copy code
+
+```shell
+spring.application.name=spring-boot-hibernate-example
+hibernate.id.new_generator_mappings=false
+hibernate.connection.driver_class = com.mysql.jdbc.Driver
+----------option-----------
 spring.datasource.url=jdbc:h2:mem:testdb
 spring.datasource.driver-class-name=org.h2.Driver
 spring.datasource.username=sa
 spring.datasource.password=password
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=true
+```
