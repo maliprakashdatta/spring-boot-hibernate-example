@@ -48,3 +48,12 @@ spring.datasource.password=password
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=true
 ```
+
+
+## Run After Screen
+
+<image src="https://github.com/user-attachments/assets/8761c64f-fc50-477f-9cd7-4677d439aede" width="750" height="350">
+
+
+
+
